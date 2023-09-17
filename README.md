@@ -1,9 +1,9 @@
 [![CI](https://github.com/yuchenz427/IDS706-Python-Template/actions/workflows/cicd.yml/badge.svg)](https://github.com/yuchenz427/IDS706-Python-Template/actions/workflows/cicd.yml)
-# IDS706-Python-Template
+# IDS706_Fall2023_Mini_Project_3_Polars
 
-Python template repo for Fall 2023 IDS_706-Data Engineering Systems at Duke Univ. 
+Week 3 Mini Project Polars Descriptive Statistics Script
 
-It contains:
+It contains the basic template elements:
 
 - ``.devcontainer`` includes a `Dockerfile` that specifies the configurations of container, and a `devcontainer.json` which is a configuration file used in the context of Visual Studio Code
 
@@ -11,18 +11,18 @@ It contains:
 
 - ``Makefile`` specifies build automation on Linux
 
-- ``requirements.txt`` lists the dependencies, libraries, and specific versions of Python packages required for the project
+- ``requirements.txt`` lists the dependencies, libraries, and specific versions of Python packages required for the project. <br> For this project, add `polars` to the requirements list - for compatibility, the version of polars is specified to `0.10.26`.
 
 It also includes ``main.py`` and ``test_main.py`` as sample files to show the functionality of the CI pipeline.
 
-## Github Actions Demo
+- ``main.py`` imports ``polars`` library and uses `pl.read_csv()` to load the csv data `biostats.csv`, which contains statistics related to personal biometrics. It generates summary statistics including mean, median and standard deviation of each data column using ``data.describe()`` (See below). It then extracts the weights colomn and makes use of ``matplotlib`` to visualize the data by creating a histogram of the distribution of weight data.
 
-`Github Actions` is configured to kick off workflows with Github events. Below shows some samples:
+- ``test_main.py`` contains a unit test related to a function defined in ``main.py``.
 
-![img](./demo_img/demo_make_install.png)
+## Statistic Summary
+![img](./statistic_summary.png)
 
-![img](./demo_img/demo_make_test.png)
 
-![img](./demo_img/demo_make_format.png)
+## Data Visualization 
 
-![img](./demo_img/demo_make_lint.png)
+![img](./data_visualization.png)
