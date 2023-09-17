@@ -12,3 +12,4 @@ fastapi==0.85.0
 uvicorn==0.18.3
 #polars
 polars==0.10.26
+matplotlib
